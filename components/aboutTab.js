@@ -1,15 +1,15 @@
-export default function WorkModal() {
-  const workModal = document.createElement('dialog');
-  workModal.classList.add('photoModalClass');
+export default function AboutModal() {
+  const aboutModal = document.createElement('dialog');
+  aboutModal.classList.add('photoModalClass');
 
   const header = document.createElement("h1");
-  const headerText = document.createTextNode("WORK");
+  const headerText = document.createTextNode("INTRO");
   header.append(headerText); 
 
   const line = document.createElement('div');
 
   const photo = document.createElement('img');
-  photo.setAttribute('src', "./resources/tab-2.jpg")
+  photo.setAttribute('src', "./resources/tab-3.jpg")
   photo.setAttribute('alt', 'alt photo')
 
   const par = document.createElement('p');
@@ -30,36 +30,36 @@ export default function WorkModal() {
   document.querySelector("#header").classList.add("gone")
   document.querySelector("#body").classList.add("bodyPadding")
 
-  workModal.addEventListener('keydown', e => {
+  aboutModal.addEventListener('keydown', e => {
     if (e.key === "Escape") {
-      workModal.remove();
+      aboutModal.remove();
       document.querySelector("#main").classList.remove("gone")
       document.querySelector("#header").classList.remove("gone")
       document.querySelector("#body").classList.remove("bodyPadding")
     }
   })
-  workModal.addEventListener('click', e => {
-    const bounds = workModal.getBoundingClientRect();
+  aboutModal.addEventListener('click', e => {
+    const bounds = aboutModal.getBoundingClientRect();
     if (
       e.clientX < bounds.left ||
       e.clientX > bounds.right ||
       e.clientY < bounds.top ||
       e.clientY > bounds.bottom
     ) {
-      workModal.remove();
+      aboutModal.remove();
       document.querySelector("#main").classList.remove("gone")
       document.querySelector("#header").classList.remove("gone")
       document.querySelector("#body").classList.remove("bodyPadding")
     }
   })
   exitIcon.addEventListener('click', () => {
-    workModal.remove();
+    aboutModal.remove();
     document.querySelector("#main").classList.remove("gone")
     document.querySelector("#header").classList.remove("gone")
     document.querySelector("#body").classList.remove("bodyPadding")
   })
 
-  workModal.append(header,line, photo, par, par2, exitIcon);
+  aboutModal.append(header,line, photo, par, par2, exitIcon);
 
-  return workModal
+  return aboutModal
 }

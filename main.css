@@ -196,12 +196,13 @@ main {
   }
 
 }
-.workModalClass {
+.photoModalClass {
   flex-direction: column;
   background-color: #1a2228d2;
   width: 70%;
   border: none;
   padding: 20px 50px;
+  overflow: hidden;
 
   >h1 {
 
@@ -323,7 +324,7 @@ main {
       height: 50%;
     }
   }
-  .workModalClass{
+  .photoModalClass{
     height: 80%;
 
     >img{

@@ -4,7 +4,9 @@
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
+body{
+  padding: 0 7px;
+}
 header{
   position: relative;
 >.diamondPlace{
@@ -37,11 +39,46 @@ header{
 }
 
 >hr{
-  width: 95%;
+  /* width: 95%; */
 }
+}
+main{
+  background-color: red;
+
+  >#heroSec{
+    
+    >h1{
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    >p{
+      line-height: 27px;
+      padding: 0 7px;
+      padding-bottom: 20px;
+
+      >a{
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px dotted #f7ecec;
+      }
+    }
+    >hr{
+      /* width: 95%; */
+      padding: 0px;
+      
+    }
+  }
 }
 
 @media (min-width: 960px) {
   header{
+  }
+  main{
+
+    >#heroSec{
+      >p{
+        text-align: center;
+      }
+    }
   }
 }

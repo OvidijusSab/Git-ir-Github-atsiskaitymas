@@ -196,6 +196,50 @@ main {
   }
 
 }
+.workModalClass {
+  flex-direction: column;
+  background-color: #1a2228d2;
+  width: 70%;
+  border: none;
+  padding: 20px 50px;
+
+  >h1 {
+
+    letter-spacing: 7px;
+    color: white;
+    font-weight: 500;
+    font-size: 29px;
+  }
+  >div{
+    width: 120px;
+    height: 1.5px;
+    background-color: #6c7173;
+    margin-bottom: 25px;
+  }
+  >img{
+    width: 100%;
+  }
+  >p{
+    color:#C1CCD1;
+    line-height: 30px;
+  }
+  >i{
+    color:white;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    transition: transform 0.5s;
+    transform: rotate(0deg);
+
+    &:hover{
+      cursor: pointer;
+      transform: rotate(90deg);
+    }
+  }
+
+}
 
 @media (min-width: 960px) {
   body {
@@ -276,6 +320,15 @@ main {
 
     >video{
       width: 100%;
+      height: 50%;
+    }
+  }
+  .workModalClass{
+    height: 80%;
+
+    >img{
+      width: 100%;
+      object-fit: fill;
       height: 50%;
     }
   }

@@ -39,7 +39,7 @@ header{
   margin-bottom: 40px;
   position: relative;
 
-  >svg{
+  >img{
     width: 100%;
     padding: 30px;
   } 
@@ -131,6 +131,13 @@ main{
     }
   }
 }
+.gone{
+  display:none;
+}
+.bodyPadding{
+  padding-bottom: 250%;
+  overflow: hidden;
+}
 
 @media (min-width: 960px) {
   body {
@@ -190,4 +197,12 @@ main{
       }
     }
   }
+  .gone{
+    display:none;
+  }
+  .bodyPadding{
+    padding-bottom: 49%;
+    overflow: hidden;
+  }
 }
+

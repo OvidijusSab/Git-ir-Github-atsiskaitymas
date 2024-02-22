@@ -7,7 +7,7 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
-  padding: 0 7px;
+  padding: 0 12px;
   background-image: url(resources/bg.jpg);
   background-repeat: no-repeat;
   background-position: center top ;
@@ -26,6 +26,7 @@ body {
 }
 header{
   position: relative;
+  padding-top: 35px;
 >.diamondPlace{
   display: flex;
   border: 1px solid white;
@@ -62,8 +63,8 @@ main{
     
     >h1{
       text-align: center;
-      letter-spacing: 1px;
-      color:#C1CCD1;
+      letter-spacing: 2px;
+      color:white;
       font-weight: 500;
     }
     >p{
@@ -76,7 +77,12 @@ main{
       >a{
         color:#C1CCD1;
         text-decoration: none;
-        border-bottom: 1px dotted #C1CCD1;
+        border-bottom: 1px dashed #C1CCD1;
+
+        &:hover{
+          color:#7c9caa;
+          cursor: pointer;
+        }
       }
     }
     >hr{
@@ -118,6 +124,10 @@ main{
         color:#C1CCD1;
         border-color:#C1CCD1;
         cursor: pointer;
+
+        &:hover{
+          background-color: rgba(162, 161, 161, 0.631);
+        }
       }
     }
   }
@@ -125,19 +135,24 @@ main{
 
 @media (min-width: 960px) {
   body {
-    padding: 0 40px;
+    padding: 100px 40px;
     background-image: url(resources/bg.jpg);
     background-repeat: no-repeat;
-    background-position: center top 50%;
+    background-position: center top 35%;
     background-size: cover;
   }
   header{
+    padding-top:0px;
   }
   main{
 
     >#heroSec{
+      >h1{
+        font-size: 40px;
+      }
       >p{
         text-align: center;
+        letter-spacing: 2px;;
       }
     }
     >#buttonsSec{

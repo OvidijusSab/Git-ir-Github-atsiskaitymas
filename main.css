@@ -152,7 +152,7 @@ main {
 .introModalClass {
   background-color: #1a2228d2;
   width: 70%;
-  height: 95%;
+  height: 90%;
   border: none;
   padding: 20px 50px;
   overflow: hidden;
@@ -203,7 +203,7 @@ main {
   flex-direction: column;
   background-color: #1a2228d2;
   width: 70%;
-  height: 95%;
+  height: 90%;
   border: none;
   padding: 20px 50px;
   overflow: hidden;

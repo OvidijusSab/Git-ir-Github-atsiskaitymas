@@ -4,9 +4,9 @@ export default function IntroModal() {
 
   const header = document.createElement("h1");
   const headerText = document.createTextNode("INTRO");
-  const line = document.createElement('div')
-  line.classList.add("lineForModal")
-  header.append(headerText);
+  header.append(headerText); 
+
+  const line = document.createElement('div');
 
   const video = document.createElement('video');
   video.setAttribute('src', "./resources/tab-1.mp4")
@@ -61,7 +61,7 @@ export default function IntroModal() {
     document.querySelector("#body").classList.remove("bodyPadding")
   })
 
-  introModal.append(header, video, par, par2, exitIcon);
+  introModal.append(header,line, video, par, par2, exitIcon);
 
   return introModal
 }

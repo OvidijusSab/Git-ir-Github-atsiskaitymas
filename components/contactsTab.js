@@ -1,15 +1,15 @@
-export default function AboutModal() {
-  const aboutModal = document.createElement('dialog');
-  aboutModal.classList.add('photoModalClass');
+export default function ContactModal() {
+  const contactModal = document.createElement('dialog');
+  contactModal.classList.add('photoModalClass');
 
   const header = document.createElement("h1");
-  const headerText = document.createTextNode("ABOUT");
+  const headerText = document.createTextNode("CONTACT");
   header.append(headerText); 
 
   const line = document.createElement('div');
 
   const photo = document.createElement('img');
-  photo.setAttribute('src', "./resources/tab-3.jpg")
+  photo.setAttribute('src', "./resources/tab-4.jpg")
   photo.setAttribute('alt', 'alt photo')
 
   const par = document.createElement('p');
@@ -20,7 +20,8 @@ export default function AboutModal() {
   par.append(parText);
 
   const par2 = document.createElement('p');
-  const par2Text = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus quas placeat ex corporis dolore quasi laudantium architecto, voluptate, labore corrupti vitae reiciendis eum nobis, libero ipsum? Reiciendis, suscipit saepe.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi perferendis suscipit molestiae aut natus voluptatibus nulla eligendi! Tempora, totam quaerat!");  par2.append(par2Text);
+  const par2Text = document.createTextNode("Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea temporibus quas placeat ex corporis dolore quasi laudantium architecto, voluptate, labore corrupti vitae reiciendis eum nobis, libero ipsum? Reiciendis, suscipit saepe.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi perferendis suscipit molestiae aut natus voluptatibus nulla eligendi! Tempora, totam quaerat!");
+  par2.append(par2Text);
 
   const exitIcon = document.createElement('i');
   exitIcon.classList.add("bi", "bi-x-lg");
@@ -29,36 +30,36 @@ export default function AboutModal() {
   document.querySelector("#header").classList.add("gone")
   document.querySelector("#body").classList.add("bodyPadding")
 
-  aboutModal.addEventListener('keydown', e => {
+  contactModal.addEventListener('keydown', e => {
     if (e.key === "Escape") {
-      aboutModal.remove();
+      contactModal.remove();
       document.querySelector("#main").classList.remove("gone")
       document.querySelector("#header").classList.remove("gone")
       document.querySelector("#body").classList.remove("bodyPadding")
     }
   })
-  aboutModal.addEventListener('click', e => {
-    const bounds = aboutModal.getBoundingClientRect();
+  contactModal.addEventListener('click', e => {
+    const bounds = contactModal.getBoundingClientRect();
     if (
       e.clientX < bounds.left ||
       e.clientX > bounds.right ||
       e.clientY < bounds.top ||
       e.clientY > bounds.bottom
     ) {
-      aboutModal.remove();
+      contactModal.remove();
       document.querySelector("#main").classList.remove("gone")
       document.querySelector("#header").classList.remove("gone")
       document.querySelector("#body").classList.remove("bodyPadding")
     }
   })
   exitIcon.addEventListener('click', () => {
-    aboutModal.remove();
+    contactModal.remove();
     document.querySelector("#main").classList.remove("gone")
     document.querySelector("#header").classList.remove("gone")
     document.querySelector("#body").classList.remove("bodyPadding")
   })
 
-  aboutModal.append(header,line, photo, par, par2, exitIcon);
+  contactModal.append(header,line, photo, par, par2, exitIcon);
 
-  return aboutModal
+  return contactModal
 }

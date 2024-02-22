@@ -158,7 +158,7 @@ main {
   width: 70%;
   border: none;
   padding: 20px 50px;
-
+  overflow: hidden;
   >h1 {
 
     letter-spacing: 7px;
@@ -203,6 +203,7 @@ main {
   border: none;
   padding: 20px 50px;
   overflow: hidden;
+  margin-top: 20px;
 
   >h1 {
 

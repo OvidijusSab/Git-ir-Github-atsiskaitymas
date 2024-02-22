@@ -3,15 +3,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
-body{
+body {
+  font-family: "Source Sans 3", sans-serif;
   padding: 0 7px;
+  background-image: url(resources/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top ;
+  background-size: cover;
+}
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.504); /* Adjust opacity for darker effect */
+    z-index: -1;
+  
 }
 header{
   position: relative;
 >.diamondPlace{
   display: flex;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 50%;
   margin:0 auto;
   width: 100px;
@@ -29,48 +46,91 @@ header{
 }
 :nth-child(2) {
   position: absolute;
-  width: 1px; /* Width 1px to make it a vertical line */
-  height: 29%; /* Adjusted height to ensure the line extends below the .diamondPlace div */
-  background-color: black;
-  top: 85%; /* Positioned at the bottom of the .diamondPlace div */
+  width: 1px;
+  height: 29%;
+  background-color: white;
+  top: 85%;
   transform: translateY(-50%);
-  left: 50%; /* Centered horizontally */
+  left: 50%;
   z-index: -1;
 }
 
->hr{
-  /* width: 95%; */
-}
 }
 main{
-  background-color: red;
-
+  padding-bottom: 50px;
   >#heroSec{
     
     >h1{
       text-align: center;
       letter-spacing: 1px;
+      color:#C1CCD1;
+      font-weight: 500;
     }
     >p{
       line-height: 27px;
       padding: 0 7px;
       padding-bottom: 20px;
+      color:#C1CCD1;
+      font-weight: 400;
 
       >a{
-        color: white;
+        color:#C1CCD1;
         text-decoration: none;
-        border-bottom: 1px dotted #f7ecec;
+        border-bottom: 1px dotted #C1CCD1;
       }
     }
     >hr{
-      /* width: 95%; */
       padding: 0px;
       
+    }
+  }
+  >#buttonsSec{
+    position: relative;
+    >:nth-child(1) {
+      position: absolute;
+      width: 1px;
+      height: 22%;
+      background-color:#C1CCD1;
+      top: 7%;
+      transform: translateY(-50%);
+      left: 50%;
+      z-index: 1;
+      
+    }
+    >.mainButtons{
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+
+      >:nth-child(1){
+        border-radius: 5px 5px 0px 0px;
+      }
+
+      >:nth-child(4){
+        border-radius: 0px 0px 5px 5px;
+      }
+
+      >button{
+        padding: 15px 0px;
+        letter-spacing: 2px;
+        font-size: 13px;
+        background: unset;
+        color:#C1CCD1;
+        border-color:#C1CCD1;
+        cursor: pointer;
+      }
     }
   }
 }
 
 @media (min-width: 960px) {
+  body {
+    padding: 0 40px;
+    background-image: url(resources/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top 50%;
+    background-size: cover;
+  }
   header{
   }
   main{
@@ -78,6 +138,30 @@ main{
     >#heroSec{
       >p{
         text-align: center;
+      }
+    }
+    >#buttonsSec{
+      >:nth-child(1) {
+        height: 55%;
+        top:14%
+      }
+      >.mainButtons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 30px;
+
+        >:nth-child(1){
+          border-radius: 5px 0px 0px 5px;
+        }
+  
+        >:nth-child(4){
+          border-radius: 0px 5px 5px 0px;
+        }
+        >button{
+          width: 120px;
+          padding: 12px 0px;
+        }
       }
     }
   }
